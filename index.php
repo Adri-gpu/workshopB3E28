@@ -1,13 +1,31 @@
 <html>
 <head>
-    <title>Event Calendar</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="Styles/main.css">
 </head>
 
 <body>
-<h1>This Month's Events</h1>
+<div class=container>
+<fieldset>
+  <form action="" method="post">
+    <h1>Connexion</h1>
+    <label for="username">Identifiant :</label>
+    <br/>
+    <input type="text" id="username" name="username" required size="30">
+    <br/>
+    <label for="password">Mot de passe :</label>
+    <br/>
+    <input type="password" id="password" name="password" required size="30">
+    <br/>
+    <br/>
+    <input type="submit " value="Se connecter">
+  </form>
+</fieldset>
+
+</div>
+
 <?php
-  echo ("The calendar goes here.");
+
 ?>
 </body>
 </html>

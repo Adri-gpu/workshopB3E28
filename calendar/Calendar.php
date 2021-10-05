@@ -23,9 +23,16 @@ class Calendar
         echo $this->showMonths($months) . " " . $this->showYears($year) . "</br>";
         $daysNumber = cal_days_in_month(CAL_GREGORIAN, $months, $year);
         $i = 0;
+        $c = 0;
         while($i < $daysNumber)
         {
-            echo "<p style=\" display: inline-block; margin-left: 20px; \">" . $i + 1 . "</p>";
+            if($c == 5)
+            {
+                echo "</br>";
+                $c = 0;
+            }
+            echo "<p class=\"buttonDay\">" . $i + 1 . "</p>";
+            $c++;
             $i++;
         }
     }

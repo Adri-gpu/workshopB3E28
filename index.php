@@ -1,5 +1,5 @@
 <?php
-	include('server.php');
+	include('temp_server.php');
 ?>
 <html>
 <head>

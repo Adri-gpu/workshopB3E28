@@ -1,6 +1,3 @@
-<?php
-	include('temp_server.php');
-?>
 <html>
 <head>
     <title>Accueil</title>
@@ -9,11 +6,6 @@
 
 <body>
 <div class=container>
-  <?php
-if(isset($user_name)){
-	echo $user_name;
-}else{
-  echo'
   <fieldset>
     <form action="login" method="post">
       <h1>Connexion</h1>
@@ -28,10 +20,7 @@ if(isset($user_name)){
       <br/>
       <input type="submit" id="login" value="Se connecter">
     </form>
-  </fieldset>'
-}
-  ?>
-
+  </fieldset>
 </div>
 
 <?php

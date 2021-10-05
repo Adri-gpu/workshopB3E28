@@ -1,6 +1,3 @@
-<?php
-	include('temp_server.php');
-?>
 <html>
 <head>
     <title>Accueil</title>
@@ -23,6 +20,9 @@
     <br/>
     <input type="submit" id="login" value="Se connecter">
   </form>
+  <?php
+	include('temp_server.php');
+?>
 </fieldset>
 
 </div>

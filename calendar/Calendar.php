@@ -90,9 +90,4 @@ class Calendar
     {
         return $year;
     }
-
-    public function makeUrl($isNext, $year, $months)
-    {
-        
-    }
 }

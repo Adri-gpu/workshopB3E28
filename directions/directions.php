@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Directions</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="directions.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         $fullurl = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin_LngLat["lat"].",".$origin_LngLat["lng"]."&destination=".$destination_LngLat["lat"].",".$destination_LngLat["lng"]."&mode=".$mode."&language=fr&key=AIzaSyB_hPyIm4QUJpav-aZCq6EcE3iMGNWZkJA";
         $string = file_get_contents($fullurl); // get json content
         $decoded_route = json_decode($string, true); //json decoder 
-        echo $fullurl."<br/>";
+        echo "<a class=step href=".$fullurl.">".$fullurl."</a>";
         //var_dump($decoded_route);
         $json_steps = $decoded_route["routes"][0]["legs"][0]["steps"];
         $numsteps = 0;
@@ -42,15 +42,15 @@
                 if(isset($step["transit_details"]["trip_short_name"])){
                     $line = " - Ligne : ".$step["transit_details"]["trip_short_name"];
                 }
-                echo "<a class=step>".$step["html_instructions"]." - Compagnie : "." ".$step["transit_details"]["line"]["agencies"][0]["name"].$line." - Arrêt : ".$step["transit_details"]["arrival_stop"]["name"]."</a><br/>";
+                echo "<a class=step>".$step["html_instructions"]." - Compagnie : "." ".$step["transit_details"]["line"]["agencies"][0]["name"].$line." - Arrêt : ".$step["transit_details"]["arrival_stop"]["name"]."</a>";
 
             }else if($step["travel_mode"]=="WALKING"){//If next step is walking
                 $substeps = $step["steps"];
                 foreach ($substeps as $key => $substep) {
                     if(isset($substep["html_instructions"])){
-                        echo "<a class=step>".$substep["html_instructions"]." puis continuer ".$substep["distance"]["value"]."m</a><br/>";
+                        echo "<a class=step>".$substep["html_instructions"]." puis continuer ".$substep["distance"]["value"]."m</a>";
                     }else{
-                        echo "<a class=step>".$step["html_instructions"]." (".$step["distance"]["value"]."m)</a><br/>";
+                        echo "<a class=step>".$step["html_instructions"]." (".$step["distance"]["value"]."m)</a>";
                     }
                 }
             }    

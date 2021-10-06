@@ -1,16 +1,20 @@
-* {
+*
+{
     background-color:lightslategrey;
 }
-.container{
+.container
+{
     width:100%;
     text-align: center;
 }
-fieldset{
+fieldset
+{
     border-radius: 5px;     
     width: 300px;
     margin: auto;
 }
-input{
+input
+{
     border-radius: 3px;
     background-color: #FFFFFF  ;
 }

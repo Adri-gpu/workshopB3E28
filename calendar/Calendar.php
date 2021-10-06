@@ -35,7 +35,7 @@ class Calendar
                 echo "</br>";
                 $c = 0;
             }
-            echo "<p class=\"" . $class . "\">" . $i + 1 . "</p>";
+            echo "<button class=\"" . $class . "\">" . $i + 1 . "</button>";
             $c++;
             $i++;
         }

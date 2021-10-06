@@ -14,7 +14,31 @@ include("Calendar.php");
 
 <?php
 
-$calendar = new Calendar(2021, 1);
+$year = $_GET['year'] ?? date('Y');
+$months = $_GET['months'] ?? date('m');
+
+?>
+
+<form action="index.php" method="$_POST">
+  <?php
+    $next = strval($months + 1);
+    $previous = strval($months - 1);
+    if($next == 13)
+    {
+      $next = 1;
+    }
+    if($next == 0)
+    {
+      $next = 12;
+    }
+  ?>
+  <button><a href=<?php echo "\"index.php?months=" . $previous . "&year=" . $year . "\""; ?>>Précèdent</a></button>
+  <button><a href=<?php echo "\"index.php?months=" . $next . "&year=" .$year . "\""; ?>>Suivant</a></button>
+</form>
+
+<?php
+
+$calendar = new Calendar($_GET['year'], $_GET['months']);
 
 ?>
 

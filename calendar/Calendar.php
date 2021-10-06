@@ -26,12 +26,16 @@ class Calendar
         $c = 0;
         while($i < $daysNumber)
         {
+            if($i < 9)
+                $class = "buttonDay";
+            else
+                $class = "buttonDay10";
             if($c == 5)
             {
                 echo "</br>";
                 $c = 0;
             }
-            echo "<p class=\"buttonDay\">" . $i + 1 . "</p>";
+            echo "<p class=\"" . $class . "\">" . $i + 1 . "</p>";
             $c++;
             $i++;
         }
@@ -40,31 +44,31 @@ class Calendar
     private function showMonths($months)
     {
         switch ($months) {
-            case '1':
+            case '01':
                 return "Janvier";
                 break;
-            case '2':
+            case '02':
                 return "Février";
                 break;
-            case '3':
+            case '03':
                 return "Mars";
                 break;
-            case '4':
+            case '04':
                 return "Avril";
                 break;
-            case '5':
+            case '05':
                 return "Mai";
                 break;
-            case '6':
+            case '06':
                 return "Juin";
                 break;
-            case '7':
+            case '07':
                 return "Juillet";
                 break;
-            case '8':
+            case '08':
                 return "Août";
                 break;
-            case '9':
+            case '09':
                 return "Septembre";
                 break;
             case '10':
@@ -85,5 +89,10 @@ class Calendar
     private function showYears($year)
     {
         return $year;
+    }
+
+    public function makeUrl($isNext, $year, $months)
+    {
+        
     }
 }

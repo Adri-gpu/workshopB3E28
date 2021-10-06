@@ -48,8 +48,9 @@
                 $substeps = $step["steps"];
                 foreach ($substeps as $key => $substep) {
                     if(isset($substep["html_instructions"])){
-                        echo "<a class=step>".$substep["html_instructions"]." puis continuer ".$substep["distance"]["value"]."m</a>";
+                        echo "<a class=step>".$substep["html_instructions"]."puis continuer ".$substep["distance"]["value"]."m</a>";
                     }else{
+                        $step["html_instructions"] = str_replace("Marcher", "Se rendre", $step["html_instructions"]);
                         echo "<a class=step>".$step["html_instructions"]." (".$step["distance"]["value"]."m)</a>";
                     }
                 }

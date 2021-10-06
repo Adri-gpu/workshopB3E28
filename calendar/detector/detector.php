@@ -5,39 +5,20 @@
         <link rel="stylesheet" href="detector.css" media="screen" type="text/css" />
     </head>
     <body>
-        <div id="container">
-            <!-- zone de connexion -->            
+        <div class="container">
             <form action="" method="POST">
                 <h1>Evaluation des besoins</h1>
+                <label><b>Possédez-vous votre véhicule ?</b></label>
+                <br/>
+                <div class=inline>                
+                    <input type="radio" id="oui" name="vehicle" value="oui">
+                    <label for="oui">Oui</label>
+                    <input type="radio" id="non" name="vehicle" value="non" checked>
+                    <label for="non">Non</label>
+                </div>
 
-                <label><b></b></label>
-                <input type="text" placeholder="Entrer le nom" name="username" required>
-
-                <label><b>Prénom</b></label>
-                <input type="text" placeholder="Entrer le prénom" name="username" required>
-
-                <label><b>Adresse Email</b></label>
-                <input type="password" placeholder="Entrer l'adresse email" name="password" required>
-
-                <label><b>Confirmation Adresse Email</b></label>
-                <input type="password" placeholder="Entrer l'adresse email" name="password" required>
-
-
-                <label><b>Mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
-
-                <label><b>Confirmation Mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
-
-                <input type="submit" id='submit' value='LOGIN' >
-                <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                }
-                ?>
             </form>
+            <!-- zone de connexion -->
         </div>
     </body>
 </html>

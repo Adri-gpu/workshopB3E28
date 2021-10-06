@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     </head>
     <body>
-        <div id="container">
+        <div class="container">
             <!-- zone de connexion -->
             
             <form action="verification.php" method="POST">

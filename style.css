@@ -37,5 +37,5 @@ input[type=submit], input[type=button] {
 input[type=submit]:hover, input[type=button]:hover {
     background-color: white;
     color: #C0C0C0;
-    border: 1px solid #808080;
+    border: 1px solid #808080 inset;
 }

@@ -6,12 +6,12 @@
 
 
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/WORKSHOPB3E28/module_recherche/poleEmploi.php';
+require $_SERVER['DOCUMENT_ROOT'].'/module_recherche/poleEmploi.php';
 
 $apiPoleEploi = new PoleEmploi();
-if ($_POST["motCles"] != null) {
+if (isset($_POST["motCles"])) {
     $results = $apiPoleEploi-> getOffres($_POST["motCles"]);
-    print_r($_POST["motCles"]);
+    //print_r($_POST["motCles"]);
   }
  
   // afficher les resultats de recherche d'emploi 
@@ -44,9 +44,10 @@ if ($_POST["motCles"] != null) {
                     <td> ".$results[$i]['lieuTravail']['libelle']."</td>
                     <td>".$results[$i]['description']."</td>
                 </tr>
-            </table>
-        </div>";
+            
+        ";
     }
+    echo "</table></div>";
 };
 ?>
 

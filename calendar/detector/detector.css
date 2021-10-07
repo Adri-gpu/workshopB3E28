@@ -8,8 +8,8 @@ body{
 h1{
     text-align: center;
 }
-.inline label{
-    
+.inline{
+    float: right;
 }
 form {
     margin-top: 10%;

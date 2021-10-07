@@ -1,7 +1,7 @@
 
 <?php
 
-require 'module_recherche/poleEmploi.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/WORKSHOPB3E28/module_recherche/poleEmploi.php';
 
 $apiPoleEploi = new PoleEmploi();
 

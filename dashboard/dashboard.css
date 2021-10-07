@@ -30,7 +30,7 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-input[type=submit] {
+input[type=submit], input[type=button] {
     background-color: #808080;
     color: white;
     padding: 5px;
@@ -39,8 +39,8 @@ input[type=submit] {
     cursor: pointer;
     width: 100%;
 }
-input[type=submit]:hover {
+input[type=submit]:hover, input[type=button]:hover {
     background-color: white;
     color: #C0C0C0;
-    border: 1px solid #808080;
+    border: 1px solid #808080 inset;
 }

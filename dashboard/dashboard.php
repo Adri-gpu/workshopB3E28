@@ -1,3 +1,12 @@
+<?php
+  session_start(); 
+  $bdd = new PDO('mysql:host=127.0.0.1;dbname=espace_membre', 'root', ''); 
+  if(isset($_GET['id']) AND $_GET['id'] > 0) {
+    $getid = intval($_GET['id']);
+    $requser = $bdd->prepare('SELECT * FROM membres WHERE id = ?');
+    $requser->execute(array($getid));
+    $userinfo = $requser->fetch();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +16,7 @@
         <link rel="stylesheet" href="dashboard.css" media="screen" type="text/css" />
         <title>Dashboard</title>
     </head>
-    <body>
+    <body>  
         <div class=container>
             <div class=tile style="background-color: #0078D7;"><!-- Module de recherche de financement de formation -->
               <form action="" method="post">
@@ -107,7 +116,17 @@
             </div>
             <div class=tile style="background-color: #10893E;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #FF8C00;"><h1>Work In Progress</h1></div>
-            <div class=tile style="background-color: #E74856;"><h1>Profil</h1></div>
+            <div class=tile style="background-color: #E74856;"><!-- Module de profil -->
+              <h2>Profil de <?php echo $userinfo['prenom']; ?></h2>
+              <label> Nom = <?php echo $userinfo['prenom'];?></label><br/>
+              <label>Prénom = <?php echo $userinfo['nom']; ?></label><br/>
+              <label>Mail = <?php echo $userinfo['mail']; ?></label><br/>
+              <?php if(isset($userinfo['num'])){
+                echo "<label>Numero =".$userinfo['num']."</label>";
+              }?>              
+              <input type=button onclick="" value="Editer mon profil"><!-- onclick trigger ajax UI swap -->               
+              <input type=button onclick="window.location.href='../index.php'" value="Se déconnecter"><!-- call self -->    
+            </div>
             <div class=tile style="background-color: #E3008C;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #0063B1;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #C239B3;"><h1>Work In Progress</h1></div>
@@ -115,3 +134,8 @@
         </div>
     </body>
 </html>
+<?php
+  }else{
+    echo "<h1>Accès refusé</h1>";
+  }
+?>

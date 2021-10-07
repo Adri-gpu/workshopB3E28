@@ -74,10 +74,9 @@ if(isset($_POST['forminscription'])) {
                 <label><b>Confirmation Mot de passe</b></label>
                 <input type="password" id="mdp2" laceholder="Entrer le mot de passe" name="mdp2" required>
                 <?php
-                if(isset($erreur)){
-                  echo $erreur;
-                }
-                          
+                  if(isset($erreur)){
+                     echo $erreur;
+                  }                          
                 ?>
                 <input type="submit" name="forminscription" value='Inscription' >
             </form>

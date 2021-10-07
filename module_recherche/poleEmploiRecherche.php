@@ -6,8 +6,7 @@
 
 
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/module_recherche/poleEmploi.php';
-
+include_once("poleEmploi.php");
 $apiPoleEploi = new PoleEmploi();
 if (isset($_POST["motCles"])) {
     $results = $apiPoleEploi-> getOffres($_POST["motCles"]);

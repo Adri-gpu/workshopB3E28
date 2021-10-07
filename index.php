@@ -16,7 +16,8 @@ if(isset($_POST['formconnexion'])) {
          $_SESSION['nom'] = $userinfo['nom'];
          $_SESSION['prenom'] = $userinfo['prenom'];
          $_SESSION['mail'] = $userinfo['mail'];
-         header("Location: profil.php?id=".$_SESSION['id']);
+         header("Location: dashboard");
+         //header("Location: profil.php?id=".$_SESSION['id']); //adapt to dashboard
       } else {
          $erreur = "Mauvais mail ou mot de passe !";
       }
@@ -34,18 +35,18 @@ if(isset($_POST['formconnexion'])) {
     </head>
     <body>
         <div class="container">
-            <!-- zone de connexion -->
-            
+            <!-- zone de connexion -->            
             <form action="" method="POST">
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>
-                <input type="email" placeholder="Entrer l'adresse email'" name="mailconnect" required>
+                <input type="text" placeholder="Entrer l'adresse email" name="mailconnect" required>
 
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="mdpconnect" required>
 
-                <input type="submit" name="formconnexion" value='LOGIN' >
+                <input type="submit" name="formconnexion" value='Connexion'>
+                <input type="button" onclick="window.location.href='register/index.php'" value='Inscription'>
                 <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];

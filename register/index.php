@@ -74,7 +74,7 @@ if(isset($_POST['forminscription'])) {
                 <label><b>Confirmation Mot de passe</b></label>
                 <input type="password" id="mdp2" laceholder="Entrer le mot de passe" name="mdp2" required>
 
-                <input type="submit" name="forminscription" value='LOGIN' >
+                <input type="submit" name="forminscription" value='Inscription' >
                 <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];

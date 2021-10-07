@@ -107,8 +107,8 @@
             </div>
             <div class=tile style="background-color: #10893E;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #FF8C00;"><h1>Work In Progress</h1></div>
-            <div class=tile style="background-color: #E74856;"><h1>Work In Progress</h1></div>
-            <div class=tile style="background-color: #E81123;"><h1>Work In Progress</h1></div>
+            <div class=tile style="background-color: #E74856;"><h1>Profil</h1></div>
+            <div class=tile style="background-color: #E3008C;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #0063B1;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #C239B3;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #00CC6A;"><h1>Work In Progress</h1></div>

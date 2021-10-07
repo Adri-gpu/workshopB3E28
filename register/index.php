@@ -20,7 +20,7 @@ if(isset($_POST['forminscription'])) {
                   if($mdp == $mdp2) {
                      $insertmbr = $bdd->prepare("INSERT INTO membres(nom, prenom, mail, motdepasse) VALUES(?, ?, ?, ?)");
                      $insertmbr->execute(array($nom, $prenom, $mail, $mdp));
-                     $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
+                     $erreur = "Votre compte a bien été créé ! <a href=\"../\">Me connecter</a>";
                   } else {
                      $erreur = "Vos mots de passes ne correspondent pas !";
                   }
@@ -73,15 +73,13 @@ if(isset($_POST['forminscription'])) {
 
                 <label><b>Confirmation Mot de passe</b></label>
                 <input type="password" id="mdp2" laceholder="Entrer le mot de passe" name="mdp2" required>
-
-                <input type="submit" name="forminscription" value='Inscription' >
                 <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                if(isset($erreur)){
+                  echo $erreur;
                 }
+                          
                 ?>
+                <input type="submit" name="forminscription" value='Inscription' >
             </form>
         </div>
     </body>

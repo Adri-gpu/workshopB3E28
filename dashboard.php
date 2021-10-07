@@ -9,8 +9,8 @@
     </head>
     <body>
         <div class=container>
-            <div class=tile style="background-color: #0078D7;">
-            <form action="" method="post">
+            <div class=tile style="background-color: #0078D7;"><!-- Module de recherche de financement de formation -->
+              <form action="" method="post">
                 <p>Numéro de votre formation : <input type="text" name="num_formation" /></p>
                 <p><input type="submit" value="OK"></p>
               </form>
@@ -88,7 +88,7 @@
                 }
               ?>
             </div>
-            <div class=tile style="background-color: #8764B8;">
+            <div class=tile style="background-color: #8764B8;"><!-- Module d'aide au déplacements -->
               <form action="directions/directions.php" method="post">
                 <label for="origin">Adresse ou ville de départ : </label><input type="text" name="origin" required>
                 <br>
@@ -108,10 +108,7 @@
             </div>
             <div class=tile style="background-color: #10893E;"></div>
             <div class=tile style="background-color: #FF8C00;"></div>
-            <div class=tile style="background-color: #E74856;"><!-- Module de recherche de financement de formation -->
-            
-              
-            </div>
+            <div class=tile style="background-color: #E74856;"></div>
             <div class=tile style="background-color: #E81123;"></div>
             <div class=tile style="background-color: #0063B1;"></div>
             <div class=tile style="background-color: #C239B3;"></div>

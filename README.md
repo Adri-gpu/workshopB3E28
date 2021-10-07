@@ -1,6 +1,14 @@
-# workshopB3E28
+# WorkshopB3E28
+## Team members :
+    - Azizyan Rafayel
+    - Buffat Adrien
+    - De Jesus Nicolas
+    - Durand Romain
+    - Ladoy Mathis
+    - Niclot Mingfang
+    - Paillard Nicolas
 
-TO-DO and improvements : 
+## TO-DO and improvements : 
 Add "call taxi" button when walking is needed
 Integrate directions to the dashboard
 Integrate detector to directions 

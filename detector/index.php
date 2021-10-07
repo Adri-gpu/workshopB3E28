@@ -2,11 +2,12 @@
     <head>
        <meta charset="utf-8">
         <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="../style.css" media="screen" type="text/css" />
         <link rel="stylesheet" href="detector.css" media="screen" type="text/css" />
     </head>
     <body>
         <div class="container">
-            <form action="" method="POST">
+            <form class=form action="" method="POST">
                 <h1>Evaluation des besoins</h1>
                 <label><b>Possédez-vous votre véhicule ?</b></label>
                 <div class=inline>                

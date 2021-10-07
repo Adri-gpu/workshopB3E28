@@ -13,9 +13,7 @@ class PoleEmploi {
         'scope'=> 'application_PAR_workshop_359c674297048cfde9b37d65c8d3b3499b62ac87a2ce8e8a56b2afb9c2481b23 api_offresdemploiv2 o2dsoffre'
     );
 
-    public function __construct(){
-
-    }
+    public function __construct(){}
 
     function getApi($methode,$token ='',$motCles=''){
         $curl = curl_init();
@@ -59,6 +57,8 @@ class PoleEmploi {
         $result['body'] = substr( $response, $header_size );
         curl_close($curl);
         $data = json_decode($result['body'],true);
+        print_r($data);
+
         return $data;   
     }
 

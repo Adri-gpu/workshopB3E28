@@ -33,4 +33,3 @@ Integrate detector to directions :
 Optimize code -> make more functions/classes
 
 Show profile edit menu with ajax
-

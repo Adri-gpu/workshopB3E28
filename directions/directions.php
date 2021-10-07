@@ -18,7 +18,6 @@
          * transit_routing_preference = less_walking / fewer_transfers
          * key=AIzaSyB_hPyIm4QUJpav-aZCq6EcE3iMGNWZkJA
          */
-
          /**
           * TO-DO and improvements : 
           * Comment code

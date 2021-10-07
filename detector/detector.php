@@ -21,7 +21,7 @@
                 <input type="text" placeholder="Adresse" name="address" required>
                 <br/>
                 <br/>
-                <label><b>Souhaitez/Pouvez-vous marcher ?</b></label>
+                <label><b>Quel type de handicap ?</b></label>
                 <div class=inline>                
                     <input type="radio" id="oui" name="walking" value="oui">
                     <label for="oui">Oui</label>

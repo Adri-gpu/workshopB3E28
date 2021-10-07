@@ -1,13 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Module de recherche des offres d'emploi</title>
+    </head>
+    <body>
+    <h3><?php echo $_POST["motCles"] ; ?></h3>
 
 <?php
 
-require 'module_recherche/poleEmploi.php';
+require './module_recherche/poleEmploi.php';
 
 $apiPoleEploi = new PoleEmploi();
-
 if ($_POST["motCles"] != null) {
     $results = $apiPoleEploi-> getOffres($_POST["motCles"]);
+    print_r($_POST["motCles"]);
   }
+ 
   // afficher les resultats de recherche d'emploi 
   if(count($results)<=0)
   {
@@ -41,7 +49,10 @@ if ($_POST["motCles"] != null) {
             </table>
         </div>";
     }
-}
+};
 ?>
+    </body>
+</html>
+
 
 

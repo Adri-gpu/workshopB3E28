@@ -59,6 +59,8 @@ class PoleEmploi {
         $result['body'] = substr( $response, $header_size );
         curl_close($curl);
         $data = json_decode($result['body'],true);
+        print_r($data);
+
         return $data;   
     }
 

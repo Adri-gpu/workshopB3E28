@@ -36,7 +36,7 @@ if(isset($_POST['formconnexion'])) {
     <body>
         <div class="container">
             <!-- zone de connexion -->            
-            <form action="" method="POST">
+            <form class="form" action="" method="POST">
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>

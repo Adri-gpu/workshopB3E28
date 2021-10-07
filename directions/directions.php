@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" media="screen" type="text/css" />
     <link rel="stylesheet" href="directions.css" media="screen" type="text/css" />
     <title>Direction</title>
 </head>
 <body>
-<div class=container>
+<div class=container-wide>
     <?php
         /**
         * base fullurl : https://maps.googleapis.com/maps/api/directions/json 
@@ -38,7 +39,7 @@
             $fullurl = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin_LngLat["lat"].",".$origin_LngLat["lng"]."&destination=".$destination_LngLat["lat"].",".$destination_LngLat["lng"]."&mode=".$mode."&language=fr&key=AIzaSyB_hPyIm4QUJpav-aZCq6EcE3iMGNWZkJA";
             $string = file_get_contents($fullurl); // get json content
             $decoded_route = json_decode($string, true); //json decoder 
-            echo "<a href=\"".$fullurl."\" class=step>".$fullurl."</a><br/>";
+            echo "<a href=\"".$fullurl."\" class=step><h3>Lien JSON</h3>".$fullurl."</a><br/>";
             if(count($decoded_route["routes"]) != 0)
             {
                 $json_steps = $decoded_route["routes"][0]["legs"][0]["steps"];
@@ -54,15 +55,15 @@
                         if(isset($step["transit_details"]["trip_short_name"])){
                             $line = " - Ligne : ".$step["transit_details"]["trip_short_name"];
                         }
-                        echo "<a class=step>".$step["html_instructions"]." - Compagnie : "." ".$step["transit_details"]["line"]["agencies"][0]["name"].$line." - Arrêt : ".$step["transit_details"]["arrival_stop"]["name"]."</a><br/>";
+                        echo "<a class=step>".$step["html_instructions"]." - Compagnie : "." ".$step["transit_details"]["line"]["agencies"][0]["name"].$line." - Arrêt : ".$step["transit_details"]["arrival_stop"]["name"]."</a>";
         
                     }else if($step["travel_mode"]=="WALKING"){//If next step is walking
                         $substeps = $step["steps"];
                         foreach ($substeps as $key => $substep) {
                             if(isset($substep["html_instructions"])){
-                                echo "<a class=step>".$substep["html_instructions"]." puis continuer ".$substep["distance"]["value"]."m</a><br/>";
+                                echo "<a class=step>".$substep["html_instructions"]." puis continuer ".$substep["distance"]["value"]."m</a>";
                             }else{
-                                echo "<a class=step>".$step["html_instructions"]." (".$step["distance"]["value"]."m)</a><br/>";
+                                echo "<a class=step>".$step["html_instructions"]." (".$step["distance"]["value"]."m)</a>";
                             }
                         }
                     }    
@@ -72,9 +73,8 @@
             {
                 echo "Aucun trajet trouvé de " . $_POST['origin'] . " à " . $_POST['destination'];
             }
-        }else{
-            echo 
-            '<form action="" method="post">
+        }else{ ?>
+            <form class="form" action="" method="post">
             <label for="origin">Adresse ou ville de départ : </label><input type="text" name="origin" required>
             <br>
             <br>
@@ -82,9 +82,8 @@
             <br>
             <br>
             <button>Recherche</button>
-            </form>';
-
-        }
+            </form>
+        <?php }
         function geoCode($address){
             /**
              * base url : https://maps.googleapis.com/maps/api/geocode/json?

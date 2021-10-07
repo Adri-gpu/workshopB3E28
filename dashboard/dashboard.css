@@ -1,6 +1,3 @@
-body{
-    background-color: white;
-}
 .tile{
     background: white;
     width: 30%;
@@ -14,33 +11,4 @@ body{
 }
 .tile:nth-child(5n+1){
     height: 340px;
-}
-.container{
-    margin:0 auto;
-    width: 80%;
-}
-h1{
-    text-align: center;
-}
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-input[type=submit], input[type=button] {
-    background-color: #808080;
-    color: white;
-    padding: 5px;
-    margin: 5px 0 5px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-input[type=submit]:hover, input[type=button]:hover {
-    background-color: white;
-    color: #C0C0C0;
-    border: 1px solid #808080 inset;
 }

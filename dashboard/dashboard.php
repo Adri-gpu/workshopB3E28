@@ -13,11 +13,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css" media="screen" type="text/css" />
         <link rel="stylesheet" href="dashboard.css" media="screen" type="text/css" />
         <title>Dashboard</title>
     </head>
     <body>  
-        <div class=container>
+        <div class=container-wide>
             <div class=tile style="background-color: #0078D7;"><!-- Module de recherche de financement de formation -->
               <form action="" method="post">
                 <label for="num_formation">Numéro de votre formation : </label>

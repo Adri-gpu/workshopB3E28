@@ -52,7 +52,7 @@ if(isset($_POST['forminscription'])) {
         <div class="container">
             <!-- zone de connexion -->
             
-            <form action="" method="POST">
+            <form class="form" action="" method="POST">
                 <h1>Inscription</h1>
                 
                 <label><b>Nom</b></label>

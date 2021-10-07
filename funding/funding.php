@@ -6,7 +6,7 @@
     </head>
     <body>
       <div class=container>
-      <form action="" method="post">
+      <form class="form" action="" method="post">
        <p>Le numéro de votre formation : <input type="text" name="num_formation" /></p>
        <p><input type="submit" value="OK"></p>
       </form>

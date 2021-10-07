@@ -13,13 +13,11 @@ include("Calendar.php");
 <body>
 
 <?php
-
 $year = $_GET['year'] ?? date('Y');
 $months = $_GET['months'] ?? date('m');
-
 ?>
 
-<form action="index.php" method="$_POST">
+<form action="" method="$_POST">
   <?php
     $next = strval($months + 1);
     $previous = strval($months - 1);
@@ -38,7 +36,7 @@ $months = $_GET['months'] ?? date('m');
 
 <?php
 
-$calendar = new Calendar($_GET['year'], $_GET['months']);
+$calendar = new Calendar($year, $months);
 
 ?>
 

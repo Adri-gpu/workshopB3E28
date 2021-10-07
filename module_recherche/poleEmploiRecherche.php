@@ -3,8 +3,7 @@
     <head>
         <title>Module de recherche des offres d'emploi</title>
     </head>
-    <body>
-    <h3><?php echo $_POST["motCles"] ; ?></h3>
+
 
 <?php
 require $_SERVER['DOCUMENT_ROOT'].'/WORKSHOPB3E28/module_recherche/poleEmploi.php';
@@ -36,7 +35,7 @@ if ($_POST["motCles"] != null) {
     if (count($results)>= 10) $max=10;
     else $max = count($results);
 
-    for($i=0;$i<$max;$i++)// j'affiche que les 15 premières
+    for($i=0;$i<$max;$i++)
     {
         echo "
                 <tr>
@@ -50,7 +49,7 @@ if ($_POST["motCles"] != null) {
     }
 };
 ?>
-    </body>
+
 </html>
 
 

@@ -100,7 +100,7 @@
               ?>
             </div>
             <div class=tile style="background-color: #8764B8;"><!-- Module d'aide au déplacements -->
-              <form action="../directions/directions.php" method="post">
+              <form action="../directions/" method="post">
                 <label for="origin">Adresse ou ville de départ : </label>
                 <input type="text" name="origin" placeholder="ex : Montpellier" required>
                 <label for="destinantion">Adresse ou ville d\'arrivée : </label>
@@ -109,7 +109,7 @@
               </form>
             </div>
             <div class=tile style="background-color: #FFB900;"><!-- Module de recherche d'emploi Handicap -->
-              <form method="POST" action="../module_recherche/poleEmploiRecherche.php">
+              <form method="POST" action="../module_recherche/">
                 <label for="motCles">Recherche d'emplois "handifriendly" :</label>
                 <input type="text" name="motCles" placeholder="Bâtiment, Informatique, Energie..." />
                 <input type="submit" value="Rechercher" />

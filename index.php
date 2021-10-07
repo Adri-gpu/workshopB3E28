@@ -16,7 +16,7 @@ if(isset($_POST['formconnexion'])) {
          $_SESSION['nom'] = $userinfo['nom'];
          $_SESSION['prenom'] = $userinfo['prenom'];
          $_SESSION['mail'] = $userinfo['mail'];
-         header("Location: dashboard/dashboard.php?id=".$_SESSION['id']);
+         header("Location: dashboard?id=".$_SESSION['id']);
          //header("Location: profil.php?id=".$_SESSION['id']); //adapt to dashboard
       } else {
          $erreur = "Mauvais mail ou mot de passe !";

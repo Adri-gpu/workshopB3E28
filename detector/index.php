@@ -30,7 +30,6 @@
                 </div>
                 <input type="submit" name="forminscription" value='LOGIN' >
             </form>
-            <!-- zone de connexion -->
         </div>
     </body>
 </html>

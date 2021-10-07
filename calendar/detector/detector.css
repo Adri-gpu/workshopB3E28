@@ -3,22 +3,16 @@ body{
 }
 .container{
     width:400px;
-    height: 100%;
     margin:0 auto;
 }
 h1{
     text-align: center;
 }
-.inline{
-    display: block;
-}
-.inline input{
-
-}
 .inline label{
     
 }
 form {
+    margin-top: 10%;
     padding: 30px;
     height: 555px;
     border: 1px solid #f1f1f1;

@@ -16,7 +16,18 @@
                     <input type="radio" id="non" name="vehicle" value="non" checked>
                     <label for="non">Non</label>
                 </div>
-
+                <br/>
+                <label><b>Etes-vous inscrit à une formation ? (si non, laisser vide)</b></label>
+                <input type="text" placeholder="Adresse" name="address" required>
+                <br/>
+                <label><b>Souhaitez-vous/Pouvez-vous marcher ?</b></label>
+                <div class=inline>                
+                    <input type="radio" id="oui" name="walking" value="oui">
+                    <label for="oui">Oui</label>
+                    <input type="radio" id="non" name="walking" value="non" checked>
+                    <label for="non">Non</label>
+                </div>
+                <input type="submit" id='submit' value='LOGIN' >
             </form>
             <!-- zone de connexion -->
         </div>

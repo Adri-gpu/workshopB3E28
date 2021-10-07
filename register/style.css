@@ -3,13 +3,13 @@ body{
 }
 .container{
     width:400px;
-    height:100%;
     margin:0 auto;
 }
 h1{
     text-align: center;
 }
 form {
+    margin-top: 10%;
     padding: 30px;
     border: 1px solid #f1f1f1;
     background: #fff;

@@ -6,11 +6,12 @@
     </head>
     <body>
         <div class=container>
-            <div class=tile>a</div>
-            <div class=tile>a</div>
-            <div class=tile>a</div>
-            <div class=tile>a</div>
+            <div class=tile></div>
+            <div class=tile></div>
+            <div class=tile></div>
+            <div class=tile></div>
         </div>
+        <br/>
         <!-- Module de recherche d'emploi Handicap -->
         <div style="float:left; border: 2px solid #e66465; width:60%;">
             <form method="POST" action=" /module_recherche/poleEmploiRecherche.php" style="margin: 15px; line-height: 1.5; text-align: center;">

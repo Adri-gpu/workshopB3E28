@@ -1,6 +1,10 @@
 body{
     background: #808080;
 }
+.container-wide{
+    width:80%;
+    margin:0 auto;  
+}
 .container{
     width:400px;
     margin:0 auto;  
@@ -23,8 +27,6 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
-
 input[type=submit], input[type=button] {
     background-color: #808080;
     color: white;

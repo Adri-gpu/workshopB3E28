@@ -19,17 +19,7 @@
         * language = fr
         * transit_routing_preference = less_walking / fewer_transfers
         * key=AIzaSyB_hPyIm4QUJpav-aZCq6EcE3iMGNWZkJA
-        * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        * TO-DO and improvements : 
-        * Comment code
-        * Add "call taxi" button when walking is needed
-        * Integrate directions to the dashboard
-        * Integrate detector to directions 
-        *  -> have a car and want to drive ? travel_mode -> transit/others 
-        *  -> can't walk ? transit_routing_preference -> less_walking / fewer_transfer
-        * Optimize code -> make functions
-        * Adapt generated directions text/layout for detected disabilities (bigger font, shorter instructions...)
-        */
+        **/
         if(isset($_POST["origin"])&&isset($_POST["destination"])){
             $mode = "transit";//transit, car, train, bycicle
             $origin = $_POST["origin"];

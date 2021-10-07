@@ -6,7 +6,7 @@
 
 
 <?php
-include_once("poleEmploi.php");
+include_once("jobs.php");
 $apiPoleEploi = new PoleEmploi();
 if (isset($_POST["motCles"])) {
     $results = $apiPoleEploi-> getOffres($_POST["motCles"]);

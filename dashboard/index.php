@@ -109,7 +109,7 @@
               </form>
             </div>
             <div class=tile style="background-color: #FFB900;"><!-- Module de recherche d'emploi Handicap -->
-              <form method="POST" action="../module_recherche/">
+              <form method="POST" action="../jobs/">
                 <label for="motCles">Recherche d'emplois "handifriendly" :</label>
                 <input type="text" name="motCles" placeholder="Bâtiment, Informatique, Energie..." />
                 <input type="submit" value="Rechercher" />
@@ -117,7 +117,7 @@
             </div>
             <div class=tile style="background-color: #10893E;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #FF8C00;"><h1>Work In Progress</h1></div>
-            <div class=tile style="background-color: #E74856;"><!-- Module de profil -->
+            <div class=tile style="background-color: #E74856;"><!-- Module de profil d'utilisateur -->
               <h2>Profil de <?php echo $userinfo['prenom']; ?></h2>
               <label> Nom = <?php echo $userinfo['prenom'];?></label><br/>
               <label>Prénom = <?php echo $userinfo['nom']; ?></label><br/>
@@ -126,7 +126,7 @@
                 echo "<label>Numero =".$userinfo['num']."</label>";
               }?>              
               <input type=button onclick="" value="Editer mon profil"><!-- onclick trigger ajax UI swap -->               
-              <input type=button onclick="window.location.href='../index.php'" value="Se déconnecter"><!-- call self -->    
+              <input type=button onclick="window.location.href='../'" value="Se déconnecter"><!-- call self -->    
             </div>
             <div class=tile style="background-color: #E3008C;"><h1>Work In Progress</h1></div>
             <div class=tile style="background-color: #0063B1;"><h1>Work In Progress</h1></div>

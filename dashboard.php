@@ -11,8 +11,8 @@
         <div class=container>
             <div class=tile style="background-color: #0078D7;"><!-- Module de recherche de financement de formation -->
               <form action="" method="post">
-                <p>Numéro de votre formation : <input type="text" name="num_formation" /></p>
-                <p><input type="submit" value="OK"></p>
+                <label for="num_formation">Numéro de votre formation : </label><input type="text" name="num_formation" required>
+                <input type="submit" value="OK">  
               </form>
               <?php
                 if(isset($_POST["num_formation"])){
@@ -91,18 +91,14 @@
             <div class=tile style="background-color: #8764B8;"><!-- Module d'aide au déplacements -->
               <form action="directions/directions.php" method="post">
                 <label for="origin">Adresse ou ville de départ : </label><input type="text" name="origin" required>
-                <br>
-                <br>
                 <label for="destinantion">Adresse ou ville d\'arrivée : </label><input type="text" name="destination" required>
-                <br>
-                <br>
                 <input type="submit" value="Recherche"/>
               </form>
             </div>
             <div class=tile style="background-color: #FFB900;"> <!-- Module de recherche d'emploi Handicap -->
-                <form method="POST" action="module_recherche/poleEmploiRecherche.php" style="margin: 15px; line-height: 1.5; text-align: center;">
-                    <p >Recherche les offres dont les entreprise sont adaptés aux handicapés et "handi friendly"  : </p>
-                    <input type="search" name="motCles" placeholder="Recherche par un mot clé..." />
+                <form method="POST" action="module_recherche/poleEmploiRecherche.php">
+                    <label for="motCles">Recherche d'emplois "handifriendly" :</label>
+                    <input type="text" name="motCles" placeholder="Recherche par un mot clé..." />
                     <input type="submit" value="Valider" />
                 </form>
             </div>

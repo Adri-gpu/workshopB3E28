@@ -8,15 +8,39 @@ body{
     float:left;
     margin-right: 10px;
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 5px 15px 5px 15px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    height: 115px;
+    height: 160px;
 }
 .tile:nth-child(5n+1){
-    height: 270px !important;
+    height: 340px;
 }
 .container{
     margin:0 auto;
     width: 80%;
-    height: 500px;/**caca*/
+}
+h1{
+    text-align: center;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    background-color: #808080;
+    color: white;
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #C0C0C0;
+    border: 1px solid #808080;
 }

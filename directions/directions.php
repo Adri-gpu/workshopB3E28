@@ -37,7 +37,7 @@
         $fullurl = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin_LngLat["lat"].",".$origin_LngLat["lng"]."&destination=".$destination_LngLat["lat"].",".$destination_LngLat["lng"]."&mode=".$mode."&language=fr&key=AIzaSyB_hPyIm4QUJpav-aZCq6EcE3iMGNWZkJA";
         $string = file_get_contents($fullurl); // get json content
         $decoded_route = json_decode($string, true); //json decoder 
-        //echo $fullurl."<br/>";
+        echo "<a href=\"".$fullurl."\" class=step>".$fullurl."</a><br/>";
         if(count($decoded_route["routes"]) != 0)
         {
             $json_steps = $decoded_route["routes"][0]["legs"][0]["steps"];
@@ -69,7 +69,7 @@
         }
         else
         {
-            echo "Aucun chemin possible allant de " . $_POST['origin'] . " à " . $_POST['destination'];
+            echo "Aucun trajet trouvé de " . $_POST['origin'] . " à " . $_POST['destination'];
         }
 
         function geoCode($address){

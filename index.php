@@ -1,30 +1,16 @@
+<!doctype html>
 <html>
-<head>
-    <title>Accueil</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-
-<body>
-<div class=container>
-  <fieldset>
-    <form action="login" method="post">
-      <h1>Connexion</h1>
-      <label for="username">Identifiant :</label>
-      <br/>
-      <input type="text" id="username" name="username" required size="30">
-      <br/>
-      <label for="password">Mot de passe :</label>
-      <br/>
-      <input type="password" id="password" name="password" required size="30">
-      <br/>
-      <br/>
-      <input type="submit" id="login" value="Se connecter">
-    </form>
-  </fieldset>
-</div>
-
-<?php
-
-?>
-</body>
+    <head>
+        <title>WorkshopB3E28</title>
+    </head>
+    <body>
+        <!-- Module de recherche d'emploi Handicap -->
+        <div style=" border: 2px solid #e66465; width:60%;">
+            <form method="POST" action="/module_recherche/poleEmploiRecherche.php" style="margin: 15px; line-height: 1.5; text-align: center;">
+                <p >Recherche les offres dont les entreprise sont adaptés aux handicapés et "handi friendly"  : </p>
+                <input type="search" name="motCles" placeholder="Recherche par un mot clé..." />
+                <input type="submit" value="Valider" />
+            </form>
+        </div>
+    </body>
 </html>

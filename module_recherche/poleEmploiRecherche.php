@@ -25,9 +25,9 @@ if (isset($_POST["motCles"])) {
             <b>La liste des offres avec le mot clé [".$_POST["motCles"]."] dont les entreprise sont adaptés aux handicapés et 'handi friendly' : </b></h3><br>
             <table border=1>
                 <tr>
-                    <th>Intitule</th>
+                    <th>Intitulé</th>
                     <th>Date de creation</th>
-                    <th>Location</th>
+                    <th>Localisation</th>
                     <th>Description</th>
                 <tr>";
     //if results is more than 10, show ten first; else show the total

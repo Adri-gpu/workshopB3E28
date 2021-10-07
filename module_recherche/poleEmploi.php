@@ -66,7 +66,11 @@ class PoleEmploi {
         $data = $this->getApi('POST','');
         $token = $data["access_token"];
         $results = $this->getApi('GET',$token,$motCles);
-        return $results['resultats'];
+        if(isset($results)){
+            return $results['resultats'];
+        }else{
+            return null;
+        }
     }
 
 }

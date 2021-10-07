@@ -15,7 +15,7 @@ if (isset($_POST["motCles"])) {
   }
  
   // afficher les resultats de recherche d'emploi 
-  if(count($results)<=0)
+  if(!isset($results))
   {
       echo "<h3>Nothing Found!!</h3>";
   }

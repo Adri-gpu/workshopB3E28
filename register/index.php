@@ -8,7 +8,7 @@
         <div class="container">
             <!-- zone de connexion -->
             
-            <form action="verification.php" method="POST">
+            <form action="../login/index.php" method="POST">
                 <h1>Inscription</h1>
                 
                 <label><b>Nom</b></label>
@@ -18,10 +18,10 @@
                 <input type="text" placeholder="Entrer le prénom" name="username" required>
 
                 <label><b>Adresse Email</b></label>
-                <input type="password" placeholder="Entrer l'adresse email" name="password" required>
+                <input type="text" placeholder="Entrer l'adresse email" name="email" required>
 
                 <label><b>Confirmation Adresse Email</b></label>
-                <input type="password" placeholder="Entrer l'adresse email" name="password" required>
+                <input type="text" placeholder="Entrer l'adresse email" name="email" required>
 
 
                 <label><b>Mot de passe</b></label>

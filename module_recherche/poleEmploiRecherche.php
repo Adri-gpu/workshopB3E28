@@ -7,8 +7,7 @@
     <h3><?php echo $_POST["motCles"] ; ?></h3>
 
 <?php
-
-require './module_recherche/poleEmploi.php';
+require $_SERVER['DOCUMENT_ROOT'].'/WORKSHOPB3E28/module_recherche/poleEmploi.php';
 
 $apiPoleEploi = new PoleEmploi();
 if ($_POST["motCles"] != null) {

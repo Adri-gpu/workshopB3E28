@@ -44,16 +44,15 @@ if(isset($_POST['formconnexion'])) {
 
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="mdpconnect" required>
+                
+                <?php
+                    if(isset($erreur)){
+                        echo $erreur;
+                    }
+                ?>
 
                 <input type="submit" name="formconnexion" value='Connexion'>
-                <input type="button" onclick="window.location.href='register/index.php'" value='Inscription'>
-                <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                }
-                ?>
+                <input type="button" onclick="window.location.href='register/'" value='Inscription'>
             </form>
         </div>
     </body>

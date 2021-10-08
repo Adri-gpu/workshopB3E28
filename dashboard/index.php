@@ -122,27 +122,21 @@
             <div id=profile class=tile style="background-color: #E74856;"><!-- Module de profil d'utilisateur -->
             <?php
               //fix posts names in js innerhtml
-              if(isset($_POST['newpseudo']) AND !empty($_POST['newpseudo']) AND $_POST['newpseudo'] != $user['pseudo']) {
-                $newpseudo = htmlspecialchars($_POST['newpseudo']);
-                $insertpseudo = $bdd->prepare("UPDATE membres SET pseudo = ? WHERE id = ?");
-                $insertpseudo->execute(array($newpseudo, $_SESSION['id']));
+              if(isset($_POST['newnom']) AND !empty($_POST['newnom']) AND $_POST['newnom'] != $user['pseudo']) {
+                $newnom = htmlspecialchars($_POST['newnom']);
+                $insertpseudo = $bdd->prepare("UPDATE membres SET nom = ? WHERE id = ?");
+                $insertpseudo->execute(array($newnom, $_SESSION['id']));
+                header('Location: dashboard?id='.$_SESSION['id']);
+              }
+              if(isset($_POST['newprenom']) AND !empty($_POST['newprenom']) AND $_POST['newprenom'] != $user['pseudo']) {
+                $newprenom = htmlspecialchars($_POST['newprenom']);
+                $insertpseudo = $bdd->prepare("UPDATE membres SET nom = ? WHERE id = ?");
+                $insertpseudo->execute(array($newprenom, $_SESSION['id']));
                 header('Location: dashboard?id='.$_SESSION['id']);
               }
               if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $user['mail']) {
                 $newmail = htmlspecialchars($_POST['newmail']);
                 $insertmail = $bdd->prepare("UPDATE membres SET mail = ? WHERE id = ?");
-                $insertmail->execute(array($newmail, $_SESSION['id']));
-                header('Location: dashboard?id='.$_SESSION['id']);
-              }
-              if(isset($_POST['newnum']) AND !empty($_POST['newnum']) AND $_POST['newnum'] != $user['num']) {
-                $newmail = htmlspecialchars($_POST['newnum']);
-                $insertmail = $bdd->prepare("UPDATE membres SET num = ? WHERE id = ?");
-                $insertmail->execute(array($newmail, $_SESSION['id']));
-                header('Location: dashboard?id='.$_SESSION['id']);
-              }
-              if(isset($_POST['newhandi']) AND !empty($_POST['newhandi']) AND $_POST['newhandi'] != $user['handi']) {
-                $newmail = htmlspecialchars($_POST['newhandi']);
-                $insertmail = $bdd->prepare("UPDATE membres SET handi = ? WHERE id = ?");
                 $insertmail->execute(array($newmail, $_SESSION['id']));
                 header('Location: dashboard?id='.$_SESSION['id']);
               }

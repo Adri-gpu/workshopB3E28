@@ -121,32 +121,30 @@
             <div class=tile style="background-color: #FF8C00;"><h1>Work In Progress</h1></div>
             <div id=profile class=tile style="background-color: #E74856;"><!-- Module de profil d'utilisateur -->
             <?php
-                $requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");
-              $requser->execute(array($_SESSION['id']));
-              $user = $requser->fetch();
+              //fix posts names in js innerhtml
               if(isset($_POST['newpseudo']) AND !empty($_POST['newpseudo']) AND $_POST['newpseudo'] != $user['pseudo']) {
                 $newpseudo = htmlspecialchars($_POST['newpseudo']);
                 $insertpseudo = $bdd->prepare("UPDATE membres SET pseudo = ? WHERE id = ?");
                 $insertpseudo->execute(array($newpseudo, $_SESSION['id']));
-                header('Location: profil.php?id='.$_SESSION['id']);
+                header('Location: dashboard?id='.$_SESSION['id']);
               }
               if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $user['mail']) {
                 $newmail = htmlspecialchars($_POST['newmail']);
                 $insertmail = $bdd->prepare("UPDATE membres SET mail = ? WHERE id = ?");
                 $insertmail->execute(array($newmail, $_SESSION['id']));
-                header('Location: profil.php?id='.$_SESSION['id']);
+                header('Location: dashboard?id='.$_SESSION['id']);
               }
               if(isset($_POST['newnum']) AND !empty($_POST['newnum']) AND $_POST['newnum'] != $user['num']) {
                 $newmail = htmlspecialchars($_POST['newnum']);
                 $insertmail = $bdd->prepare("UPDATE membres SET num = ? WHERE id = ?");
                 $insertmail->execute(array($newmail, $_SESSION['id']));
-                header('Location: profil.php?id='.$_SESSION['id']);
+                header('Location: dashboard?id='.$_SESSION['id']);
               }
               if(isset($_POST['newhandi']) AND !empty($_POST['newhandi']) AND $_POST['newhandi'] != $user['handi']) {
                 $newmail = htmlspecialchars($_POST['newhandi']);
                 $insertmail = $bdd->prepare("UPDATE membres SET handi = ? WHERE id = ?");
                 $insertmail->execute(array($newmail, $_SESSION['id']));
-                header('Location: profil.php?id='.$_SESSION['id']);
+                header('Location: dashboard?id='.$_SESSION['id']);
               }
               if(isset($_POST['newmdp1']) AND !empty($_POST['newmdp1']) AND isset($_POST['newmdp2']) AND !empty($_POST['newmdp2'])) {
                 $mdp1 = sha1($_POST['newmdp1']);
@@ -154,7 +152,7 @@
                 if($mdp1 == $mdp2) {
                 $insertmdp = $bdd->prepare("UPDATE membres SET motdepasse = ? WHERE id = ?");
                 $insertmdp->execute(array($mdp1, $_SESSION['id']));
-                header('Location: profil.php?id='.$_SESSION['id']);
+                header('Location: dashboard?id='.$_SESSION['id']);
                 } else {
                 $msg = "Vos deux mdp ne correspondent pas !";
                 }
@@ -166,8 +164,11 @@
               <label>Mail = <?php echo $userinfo['mail']; ?></label><br/>
               <?php if(isset($userinfo['num'])){
                 echo "<label>Numero =".$userinfo['num']."</label>";
-              }?>              
-              <input type=button onclick="showEditor()" value="Editer mon profil"><!-- onclick trigger ajax UI swap -->               
+              }
+              ?>    
+              
+               <?php if(isset($msg)) { echo $msg; } ?>          
+              <input type=button onclick=showEditor(<?php echo ("\"".$userinfo['prenom']."\"") ?>,<?php echo ("\"".$userinfo['nom']."\"") ?>,<?php echo ("\"".$userinfo['mail']."\"") ?>) value="Editer mon profil"><!-- onclick trigger ajax UI swap -->               
               <input type=button onclick="window.location.href='../'" value="Se déconnecter"><!-- call self -->    
             </div>
             <div class=tile style="background-color: #E3008C;"><h1>Work In Progress</h1></div>

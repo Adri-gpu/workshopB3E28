@@ -28,7 +28,7 @@
                     <input type="radio" id="non" name="walking" value="non" checked>
                     <label for="non">Non</label>
                 </div>
-                <input type="submit" name="forminscription" value='LOGIN' >
+                <input type="submit" name="survey" value='Valider' >
             </form>
         </div>
     </body>

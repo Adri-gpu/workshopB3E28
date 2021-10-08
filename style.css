@@ -41,17 +41,3 @@ input[type=submit]:hover, input[type=button]:hover {
     color: #C0C0C0;
     border: 1px solid #808080 inset;
 }
-.tile{
-    background: white;
-    width: 30%;
-    border-radius: 5px;
-    float:left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 5px 15px 5px 15px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    height: 160px;
-}
-.tile:nth-child(5n+1){
-    height: 340px;
-}

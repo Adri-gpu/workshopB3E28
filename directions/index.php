@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" media="screen" type="text/css" />
-    <link rel="stylesheet" href="directions.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="directions/directions.css" media="screen" type="text/css" />
     <title>Direction</title>
 </head>
 <body>

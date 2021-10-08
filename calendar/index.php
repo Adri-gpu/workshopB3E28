@@ -7,7 +7,7 @@ include("Calendar.php");
 <head>
   <meta charset="utf-8">
   <title>Calendar</title>
-  <link rel="stylesheet" href="calendar.css">
+  <link rel="stylesheet" href="calendar/calendar.css">
   <script src="script.js"></script>
 </head>
 <body>

@@ -2,7 +2,7 @@
     <head>
        <meta charset="utf-8">
         <link rel="stylesheet" href="../style.css" media="screen" type="text/css" />
-        <link rel="stylesheet" href="detector.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="detector/detector.css" media="screen" type="text/css" />
     </head>
     <body>
         <div class="container">
